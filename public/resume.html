@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Tursunov Otabek</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a365d;
+            --text: #2d3748;
+            --text-light: #718096;
+            --accent: #4299e1;
+            --border: #e2e8f0;
+            --bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            color: var(--text);
+            background-color: #f4f7f9;
+            padding: 40px 20px;
+        }
+
+        .resume-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: var(--bg);
+            padding: 60px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border-radius: 4px;
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .header-info h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 5px;
+        }
+
+        .contact-info {
+            text-align: right;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .contact-info p {
+            margin-bottom: 2px;
+        }
+
+        .contact-info a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+
+        .entry {
+            margin-bottom: 20px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .entry-header h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .entry-header .date {
+            font-weight: 500;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .entry .sub-header {
+            font-weight: 500;
+            color: var(--secondary);
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .bullet-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+
+        .bullet-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .skill-category h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .skill-category p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .interests-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .interest-tag {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .resume-container {
+                box-shadow: none;
+                padding: 0;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+
+        .no-print {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .btn-print {
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="no-print">
+        <button class="btn-print" onclick="window.print()">Print to PDF</button>
+    </div>
+
+    <div class="resume-container">
+        <header>
+            <div class="header-info">
+                <h1>Tursunov Otabek</h1>
+                <p style="font-weight: 500; color: var(--accent);">Data Analyst</p>
+            </div>
+            <div class="contact-info">
+                <p>Tashkent, Uzbekistan</p>
+                <p>+998 99 233 33 69</p>
+                <p><a href="https://www.linkedin.com/in/otabek-tursunov-8817942a8/" target="_blank">linkedin.com/in/otabek-tursunov</a></p>
+            </div>
+        </header>
+
+        <section>
+            <h2>Education</h2>
+            <div class="entry">
+                <div class="entry-header">
+                    <h3>PDP University – Tashkent</h3>
+                    <span class="date">Expected July 2027</span>
+                </div>
+                <p class="sub-header">Faculty of Data Analytics</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Leadership Experience</h2>
+            <div class="entry">
+                <div class="entry-header">
+                    <h3>PDP University – Mentor</h3>
+                    <span class="date">2025</span>
+                </div>
+                <ul class="bullet-list">
+                    <li>Guided new students during orientation week and shared practical knowledge about study direction.</li>
+                    <li>Helped students understand startup fundamentals and provided structured guidance.</li>
+                    <li>Worked closely with students to share personal experience and academic insights.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>SQL</h4>
+                    <p>SELECT, JOIN, GROUP BY, HAVING, CASE, Window functions (ROW_NUMBER / OVER), Relational databases, Primary keys.</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Excel / Google Sheets</h4>
+                    <p>VLOOKUP, XLOOKUP, IF, SUMIFS, FILTER, Pivot Tables, Data visualization.</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Python (Basic Data Analysis)</h4>
+                    <p>pandas, numpy, Reading/Analyzing Excel/CSV files, Data cleaning, Basic EDA.</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Statistics</h4>
+                    <p>Mean, median, standard deviation, Basic understanding of distributions.</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Machine Learning (Basic)</h4>
+                    <p>Linear Regression, KNN, Label Encoding, One-Hot Encoding.</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Core Competencies</h4>
+                    <p>Analytical thinking, Data cleaning & transformation, Data visualization, Drawing conclusions from data.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Interests</h2>
+            <ul class="bullet-list">
+                <li>Data analysis and emerging technologies.</li>
+                <li>Self-learning through online courses.</li>
+                <li>Focused analytical work and productivity through structured independent work.</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
